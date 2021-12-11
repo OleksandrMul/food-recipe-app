@@ -31,3 +31,16 @@
   color: white;
   cursor: pointer;
 }
+
+.app__submit:hover{
+  padding: 6px 16px;
+  font-size: 17px;
+  margin-left: 6px;
+  background: white;
+  
+  border: 2px solid green;
+  border-radius: 15px;
+  color: green;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px green;
+}
