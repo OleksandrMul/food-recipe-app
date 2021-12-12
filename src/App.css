@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 24px;
-  border-top: 15px solid pink;
+  border-top: 15px solid #32db82;
 }
 
 .app__searchForm {

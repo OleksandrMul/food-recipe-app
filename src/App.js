@@ -15,7 +15,6 @@ function App() {
   const getRecipeInfo = async () => {
     let result = await Axios.get(url)
     setRecepies(result.data.hits)
-    console.log(result.data.hits)
   }
 
   const onSubmit = (e) => {

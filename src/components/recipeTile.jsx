@@ -8,8 +8,10 @@ function RecipeTile({ recipe }) {
         className="recipeTile__image"
         src={recipe["recipe"]["image"]}
         alt={`logo-${recipe["recipe"]["label"]}`}
+        onClick={() => window.open(recipe['recipe']['url'])}
       />
       <p className="recipeTile__name">{recipe["recipe"]["label"]}</p>
+
     </div>
   );
 }
