@@ -1,13 +1,15 @@
 import React from "react";
+import './style/style.css'
 
-function RecipeTile({recipe}) {
+function RecipeTile({ recipe }) {
   return (
     <div className="recipeTile">
-      <h1>{recipe["recipe"]["label"]}</h1>
       <img
+        className="recipeTile__image"
         src={recipe["recipe"]["image"]}
         alt={`logo-${recipe["recipe"]["label"]}`}
       />
+      <p className="recipeTile__name">{recipe["recipe"]["label"]}</p>
     </div>
   );
 }

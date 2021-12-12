@@ -95,7 +95,7 @@ function App() {
         </select>
         <input className="app__submit" type="submit" value="Get Recipe" />
       </form>
-      <div>
+      <div className='app__recipes'>
         {recepies.map((recipe) => {
           return <RecipeTile key={recipe["recipe"]["calories"]} recipe={recipe} />
         } )}
