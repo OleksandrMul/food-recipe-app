@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import Axios from 'axios'
+import RecipeTile from './components/recipeTile'
 
 function App() {
   const YOUR_APP_ID = 'c5c19023'
@@ -43,15 +44,62 @@ function App() {
           }}
         />
         <select className="app__healthLabels">
-          <option value="vegan" onClick={() => {setHealthLabel('vegan')}}>vegan</option>
-          <option value="vegetarian" onClick={() => {setHealthLabel('vegetarian')}}>vegetarian</option>
-          <option value="low-sugar" onClick={() => {setHealthLabel('low-sugar')}}>low-sugar</option>
-          <option value="dairy-free" onClick={() => {setHealthLabel('dairy-free')}}>dairy-free</option>
-          <option value="immuno-supportive" onClick={() => {setHealthLabel('immuno-supportive')}}>immuno-supportive</option>
-          <option value="wheat-free" onClick={() => {setHealthLabel('wheat-free')}}>wheat-free</option>
+          <option
+            value="vegan"
+            onClick={() => {
+              setHealthLabel('vegan')
+            }}
+          >
+            vegan
+          </option>
+          <option
+            value="vegetarian"
+            onClick={() => {
+              setHealthLabel('vegetarian')
+            }}
+          >
+            vegetarian
+          </option>
+          <option
+            value="low-sugar"
+            onClick={() => {
+              setHealthLabel('low-sugar')
+            }}
+          >
+            low-sugar
+          </option>
+          <option
+            value="dairy-free"
+            onClick={() => {
+              setHealthLabel('dairy-free')
+            }}
+          >
+            dairy-free
+          </option>
+          <option
+            value="immuno-supportive"
+            onClick={() => {
+              setHealthLabel('immuno-supportive')
+            }}
+          >
+            immuno-supportive
+          </option>
+          <option
+            value="wheat-free"
+            onClick={() => {
+              setHealthLabel('wheat-free')
+            }}
+          >
+            wheat-free
+          </option>
         </select>
         <input className="app__submit" type="submit" value="Get Recipe" />
       </form>
+      <div>
+        {recepies.map((recipe) => {
+          return <RecipeTile key={recipe["recipe"]["calories"]} recipe={recipe} />
+        } )}
+      </div>
     </div>
   )
 }
